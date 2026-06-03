@@ -11,19 +11,19 @@ class Til < Formula
 
   desc "CLI for kfet's Today I Learned notes packaged as Agent Skills"
   homepage "https://github.com/kfet/til"
-  url "https://github.com/kfet/til.git", tag: "v1.0.0"
-  version "1.0.0"
+  url "https://github.com/kfet/til.git", tag: "v1.1.0"
+  version "1.1.0"
   license "MIT"
   head "https://github.com/kfet/til.git", branch: "main"
 
-  depends_on "python@3.12"
+  depends_on "python@3.9"
 
   def install
     # Build the Python venv FIRST. til_cli/setup.py reads ../README.md
     # for long_description at install time, so the file must still be at
     # the staging root when pip runs. The pkgshare.install calls below
     # would otherwise move it away and break `pip install`.
-    venv = virtualenv_create(libexec, "python3.12")
+    venv = virtualenv_create(libexec, "python3.9")
     cd "til_cli" do
       venv.pip_install "."
     end
