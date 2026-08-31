@@ -11,8 +11,8 @@ class Til < Formula
 
   desc "CLI for kfet's Today I Learned notes packaged as Agent Skills"
   homepage "https://github.com/kfet/til"
-  url "https://github.com/kfet/til.git", tag: "v1.2.0"
-  version "1.2.0"
+  url "https://github.com/kfet/til.git", tag: "v1.2.1"
+  version "1.2.1"
   license "MIT"
   head "https://github.com/kfet/til.git", branch: "main"
 
